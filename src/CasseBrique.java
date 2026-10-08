@@ -1,4 +1,5 @@
 import model.Balle;
+import model.Barre;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,6 +42,8 @@ public class CasseBrique extends Canvas {
         ArrayList<Balle> listeBalle = new ArrayList();
         listeBalle.add(new Balle());
 
+        Barre barre = new Barre();
+
         while(true) {
 
             Graphics2D dessin = (Graphics2D) getBufferStrategy().getDrawGraphics();
@@ -54,8 +57,7 @@ public class CasseBrique extends Canvas {
 //                tableauBalle[i].dessiner(dessin);
 //            }
 
-            dessin.setColor(Color.GREEN);
-
+            barre.dessiner(dessin);
 
             for(Balle balle : listeBalle) {
                 balle.deplacement();

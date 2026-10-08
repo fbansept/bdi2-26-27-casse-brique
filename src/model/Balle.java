@@ -2,13 +2,10 @@ package model;
 
 import java.awt.*;
 
-public class Balle {
+public class Balle extends Sprite {
 
-    private int x;
-    private int y;
     private int vitesseHorizontale;
     private int vitesseVerticale;
-    private Color couleur = Color.RED;
 
     public Balle() {
         this.x = (int)(Math.random() * 600);
@@ -46,28 +43,12 @@ public class Balle {
         dessin.fillOval(x, y,20,20);
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public int getVitesseHorizontale() {
         return vitesseHorizontale;
     }
 
     public void setVitesseHorizontale(int vitesseHorizontale) {
         this.vitesseHorizontale = vitesseHorizontale;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public int getVitesseVerticale() {

@@ -1,4 +1,20 @@
 package model;
 
-public class Barre {
+import java.awt.*;
+
+public class Barre extends Sprite {
+
+    private int largeur = 200;
+    private int hauteur = 40;
+
+    public Barre() {
+        couleur = Color.GREEN;
+        x = 200;
+        y = 700;
+    }
+
+    public void dessiner(Graphics2D dessin) {
+        dessin.setColor(couleur);
+        dessin.fillRect( x, y, largeur, hauteur);
+    }
 }
