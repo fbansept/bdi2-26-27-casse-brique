@@ -1,5 +1,6 @@
 import model.Balle;
 import model.Barre;
+import model.Sprite;
 
 import javax.swing.*;
 import java.awt.*;
