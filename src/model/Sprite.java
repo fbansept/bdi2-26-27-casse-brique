@@ -8,6 +8,7 @@ public abstract class Sprite {
     protected int y;
     protected Color couleur;
 
+
     public int getX() {
         return x;
     }

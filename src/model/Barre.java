@@ -10,8 +10,5 @@ public class Barre extends Rectangle {
         y = 700;
     }
 
-    public void dessiner(Graphics2D dessin) {
-        dessin.setColor(couleur);
-        dessin.fillRect( x, y, largeur, hauteur);
-    }
+
 }

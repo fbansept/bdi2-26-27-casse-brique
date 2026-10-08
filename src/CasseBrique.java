@@ -4,9 +4,14 @@ import model.Sprite;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 public class CasseBrique extends Canvas {
+
+    private ArrayList<Balle> listeBalle = new ArrayList();
+    private Barre barre = new Barre();
 
     public CasseBrique() throws InterruptedException {
 
@@ -25,6 +30,31 @@ public class CasseBrique extends Canvas {
         fenetre.requestFocus();
         this.setFocusable(false);
 
+        KeyListener evenement = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+
+                    System.out.println("gauche");
+
+                } else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+                    System.out.println("droite");
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        };
+
+        fenetre.addKeyListener(evenement);
+
         fenetre.setIgnoreRepaint(true);
         fenetre.setResizable(false);
 
@@ -40,10 +70,9 @@ public class CasseBrique extends Canvas {
 
     public void demarrer() throws InterruptedException {
 
-        ArrayList<Balle> listeBalle = new ArrayList();
+
         listeBalle.add(new Balle());
 
-        Barre barre = new Barre();
 
         while(true) {
 
