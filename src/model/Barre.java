@@ -2,10 +2,7 @@ package model;
 
 import java.awt.*;
 
-public class Barre extends Sprite {
-
-    private int largeur = 200;
-    private int hauteur = 40;
+public class Barre extends Rectangle {
 
     public Barre() {
         couleur = Color.GREEN;
