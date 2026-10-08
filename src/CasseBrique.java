@@ -54,6 +54,9 @@ public class CasseBrique extends Canvas {
 //                tableauBalle[i].dessiner(dessin);
 //            }
 
+            dessin.setColor(Color.GREEN);
+
+
             for(Balle balle : listeBalle) {
                 balle.deplacement();
                 balle.dessiner(dessin);
