@@ -1,11 +1,32 @@
 package model;
 
+import java.awt.*;
+
 public class Balle {
 
-    private int x = 300;
-    private int y = 200;
-    private int vitesseHorizontale = 5;
-    private int vitesseVerticale = 3;
+    private int x;
+    private int y;
+    private int vitesseHorizontale;
+    private int vitesseVerticale;
+    private Color couleur = Color.RED;
+
+    public Balle() {
+        this.x = (int)(Math.random() * 600);
+        this.y = (int)(Math.random() * 800);
+        this.vitesseHorizontale = (int)(Math.random() * 9) + 1;
+        this.vitesseVerticale = (int)(Math.random() * 9) + 1;
+        this.couleur = new Color(
+                (float)Math.random(),
+                (float)Math.random(),
+                (float)Math.random());
+    }
+
+    public Balle(int x, int y, int vitesseHorizontale, int vitesseVerticale) {
+        this.x = x;
+        this.y = y;
+        this.vitesseHorizontale = vitesseHorizontale;
+        this.vitesseVerticale = vitesseVerticale;
+    }
 
     public void deplacement() {
         x += vitesseHorizontale;
@@ -20,6 +41,10 @@ public class Balle {
         }
     }
 
+    public void dessiner(Graphics2D dessin) {
+        dessin.setColor(couleur);
+        dessin.fillOval(x, y,20,20);
+    }
 
     public int getX() {
         return x;
